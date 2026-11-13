@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Raine's Personal Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+
+        <p class="header-label">♡ WELCOME TO MY PERSONAL WEBSITE ♡</p>
+
+        <h1 class="welcome-typing">Raine Aira's Space ♡♡♡</h1>
+
+        <p class="header-subtitle">
+            A little space filled with my memories, passions & dreams ♡
+        </p>
+
+        <div class="header-divider">
+            ✧ ─────── ♡ ─────── ✧
+        </div>
+
+        <!-- SECRET LETTER BUTTON -->
+        <button
+            id="envelopeButton"
+            class="header-letter-button"
+            onclick="openLetter()">
+            💌 A Little Note for You
+        </button>
+
+        <!-- SECRET LETTER MESSAGE -->
+        <div id="secretMessage" class="secret-message">
+
+            <h3>Dear Visitor, ♡</h3>
+
+            <p>
+                Thank you for taking the time to explore my little corner
+                of the internet! I hope you enjoyed getting to know me
+                through my memories, interests, and experiences.
+            </p>
+
+            <p>
+                Remember to keep chasing your dreams, making memories,
+                and enjoying the little things in life.
+            </p>
+
+            <p class="letter-signature">
+                 -Raine ♡
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="activities.html">Activities</a>
+        <a href="more.html">More</a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome">
+
+            <h2>Welcome to My Personal Website!</h2>
+
+            <p>
+                Hello! My name is Raine Aira. Welcome to my personal
+                website where you can learn more about me,
+                my educational background, hobbies, activities,
+                skills, and favorite things.
+            </p>
+
+            <p>
+                This website is a collection of my experiences,
+                interests, and achievements. Feel free to explore
+                and get to know me better!
+            </p>
+
+        </section>
+
+
+        <!-- HOME BOTTOM SECTIONS -->
+        <div class="home-sections">
+
+            <!-- GUESTBOOK -->
+            <section class="guestbook">
+
+                <h2>Leave a Message 💌</h2>
+
+                <p>Thank you for visiting my website!</p>
+
+                <form id="messageForm">
+
+                    <input
+                        type="text"
+                        id="visitorName"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <textarea
+                        id="visitorMessage"
+                        placeholder="Write your message here..."
+                        rows="4"
+                        required
+                    ></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+                <h3>Messages from Visitors</h3>
+
+                <div id="messageList">
+                    <p>No messages yet. Be the first to leave one!</p>
+                </div>
+
+            </section>
+
+
+            <!-- PHOTO GALLERY -->
+            <section class="home-gallery">
+
+                <h2>My Little Gallery 📸</h2>
+
+                <p>A few moments captured along the way.</p>
+
+                <div class="home-gallery-images">
+
+                    <img src="gallery1.jpeg" alt="Gallery Photo 1">
+
+                    <img src="gallery2.jpeg" alt="Gallery Photo 2">
+
+                    <img src="gallery4.jpeg" alt="Gallery Photo 3">
+
+                    <img src="gallery7.jpeg" alt="Gallery Photo 4">
+
+                    <img src="gallery5.jpeg" alt="Gallery Photo 5">
+
+                    <img src="gallery6.jpeg" alt="Gallery Photo 6">
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>Raine Bahingawan | Personal Website</p>
+
+        <p>Copyright &copy; 2026 All Rights Reserved</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // GUESTBOOK
+        const messageForm = document.getElementById("messageForm");
+
+        const messageList = document.getElementById("messageList");
+
+        let messages = JSON.parse(
+            localStorage.getItem("guestMessages")
+        ) || [];
+
+
+        function displayMessages() {
+
+            messageList.innerHTML = "";
+
+            if (messages.length === 0) {
+
+                messageList.innerHTML =
+                    "<p>No messages yet. Be the first to leave one!</p>";
+
+                return;
+            }
+
+            messages.forEach(function(message) {
+
+                const card = document.createElement("div");
+
+                card.className = "message-card";
+
+                const name = document.createElement("h4");
+
+                name.textContent = message.name;
+
+                const text = document.createElement("p");
+
+                text.textContent = message.text;
+
+                card.appendChild(name);
+
+                card.appendChild(text);
+
+                messageList.appendChild(card);
+
+            });
+
+        }
+
+
+        messageForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("visitorName")
+                .value.trim();
+
+            const text = document.getElementById("visitorMessage")
+                .value.trim();
+
+            if (!name || !text) return;
+
+            messages.push({
+                name: name,
+                text: text
+            });
+
+            localStorage.setItem(
+                "guestMessages",
+                JSON.stringify(messages)
+            );
+
+            messageForm.reset();
+
+            displayMessages();
+
+        });
+
+
+        // SECRET LETTER
+        function openLetter() {
+
+            const message = document.getElementById("secretMessage");
+
+            const button = document.getElementById("envelopeButton");
+
+            message.classList.toggle("show");
+
+            if (message.classList.contains("show")) {
+
+                button.textContent = "💌 Close My Little Letter";
+
+            } else {
+
+                button.textContent = "💌 A Little Note for You";
+
+            }
+
+        }
+
+
+        // DISPLAY SAVED GUESTBOOK MESSAGES
+        displayMessages();
+
+    </script>
+
+</body>
+</html>
