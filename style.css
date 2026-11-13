@@ -1,0 +1,1599 @@
+
+/* =====================================
+   GENERAL WEBSITE STYLING
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff9fb;
+    color: #6b5961;
+    line-height: 1.7;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+    background-color: #fce4ec;
+    color: #8e6475;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 15px;
+    margin-top: 8px;
+    color: #a47d8d;
+}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+nav {
+    background-color: #f8dce6;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #886574;
+    text-decoration: none;
+    padding: 10px 16px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background-color: #f2c8d7;
+    border-radius: 8px;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+main {
+    width: 88%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background-color: #fce4ec;
+    color: #886574;
+    text-align: center;
+    padding: 18px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 13px;
+}
+
+/* =====================================
+   GENERAL SECTION LABELS
+===================================== */
+
+.section-label {
+    color: #b78396;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* =====================================
+   HOME PAGE
+===================================== */
+
+.welcome {
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 25px;
+    border: 2px solid #f8dce6;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.welcome h2 {
+    color: #c18b9e;
+    font-size: 28px;
+}
+
+/* Home Two Column Layout */
+
+.home-sections {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.guestbook,
+.home-gallery {
+    background-color: white;
+    border: 2px solid #f8dce6;
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.guestbook h2,
+.home-gallery h2 {
+    color: #c18b9e;
+}
+
+/* Guestbook Form */
+
+#messageForm {
+    width: 100%;
+    margin: 15px auto;
+}
+
+.guestbook input,
+.guestbook textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #edcbd7;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.guestbook button {
+    background-color: #f2c8d7;
+    color: #765565;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.guestbook button:hover {
+    background-color: #e8b9c8;
+}
+
+/* Guestbook Messages */
+
+#messageList {
+    background-color: #fff9fb;
+    border: 1px solid #f8dce6;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+.message-card {
+    background-color: white;
+    border-left: 4px solid #e8b9c8;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Home Photo Gallery */
+
+.home-gallery-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.home-gallery-images img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #f8dce6;
+    transition: transform 0.3s ease;
+}
+
+.home-gallery-images img:hover {
+    transform: scale(1.04);
+}
+
+/* =====================================
+   EDUCATION PAGE
+===================================== */
+
+.education-card {
+    background-color: #fff9fb;
+    border: 2px solid #f8dce6;
+    border-left: 5px solid #e8b9c8;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.education-card h3 {
+    color: #c18b9e;
+    margin-top: 0;
+}
+
+/* =====================================
+   PROFILE PHOTOS
+===================================== */
+
+.profile-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto;
+}
+
+.profile-photo {
+    width: 30%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #f8dce6;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.03);
+}
+
+.first-photo {
+    width: 34%;
+    height: 220px;
+}
+
+.third-photo {
+    width: 30%;
+}
+
+/* =====================================
+   ABOUT ME PAGE
+===================================== */
+
+/* Left side: About Me
+   Right side: Favorite Music */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 22px;
+    align-items: start;
+    margin: 25px 0;
+}
+
+.about-left,
+.about-right {
+    min-width: 0;
+}
+
+/* About Me Introduction */
+
+.about-intro {
+    background: white;
+    padding: 22px;
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.08);
+}
+
+.about-heading {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about-heading h2 {
+    color: #956b7c;
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.about-description {
+    color: #786872;
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.about-description p {
+    margin: 10px 0;
+}
+
+/* Personal Information */
+
+.personal-info {
+    background: #fff5f8;
+    padding: 20px;
+    margin-top: 18px;
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+}
+
+.personal-info h2 {
+    color: #956b7c;
+    font-size: 21px;
+    text-align: center;
+    margin: 8px 0 15px;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.info-item {
+    background: white;
+    padding: 12px;
+    border: 1px solid #f3dce4;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.info-item:last-child {
+    grid-column: 1 / -1;
+}
+
+.info-item span {
+    color: #b78396;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.info-item p {
+    color: #786872;
+    font-size: 12px;
+    margin: 5px 0 0;
+    overflow-wrap: anywhere;
+}
+
+.info-item a {
+    color: #a87589;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+/* Favorite Artists */
+
+.music-section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 18px;
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.08);
+    text-align: center;
+}
+
+.music-section h2,
+.favorite-song h2 {
+    color: #956b7c;
+    font-size: 22px;
+    margin: 8px 0 18px;
+}
+
+.music-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.music-card {
+    background: #fffafb;
+    border: 1px solid #f3dce4;
+    border-radius: 14px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-4px);
+}
+
+.music-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.music-card h3 {
+    color: #a87589;
+    font-size: 16px;
+    margin: 10px 0 3px;
+}
+
+/* Favorite Song */
+
+.favorite-song {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.08);
+    text-align: center;
+}
+
+.song-card {
+    padding: 20px 15px;
+    background: linear-gradient(135deg, #fce4ec, #fff5f8);
+    border: 1px solid #f3dce4;
+    border-radius: 14px;
+}
+
+.song-icon {
+    color: #b78396;
+    font-size: 30px;
+}
+
+.song-card h3 {
+    color: #956b7c;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.song-card p {
+    color: #a87589;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* =====================================
+   HOBBIES PAGE
+===================================== */
+
+/* Hobbies Introduction */
+
+.hobbies-intro {
+    background: linear-gradient(135deg, #fce4ec, #fff5f8);
+    text-align: center;
+    padding: 40px 25px;
+    margin: 25px 0;
+    border: 1px solid #f4d5df;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.08);
+}
+
+.intro-label {
+    color: #b78396;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hobbies-intro h2 {
+    color: #956b7c;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.hobbies-intro p {
+    max-width: 650px;
+    margin: 10px auto;
+}
+
+.intro-decoration {
+    display: block;
+    color: #c18b9e;
+    font-size: 20px;
+    margin-top: 15px;
+    letter-spacing: 8px;
+}
+
+/* Hobby Cards */
+
+.hobbies-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    row-gap: 30px;
+    margin: 30px 0;
+}
+
+.hobby-card {
+    background: white;
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(180, 130, 150, 0.17);
+}
+
+.hobby-card h3 {
+    color: #a87589;
+    font-size: 21px;
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+.hobby-card p {
+    color: #786872;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+/* Hobby Images */
+
+.hobby-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.hobby-images img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #f8dce6;
+    transition: transform 0.3s ease;
+}
+
+.hobby-images img:hover {
+    transform: scale(1.04);
+}
+
+/* =====================================
+   ACTIVITIES PAGE
+===================================== */
+
+/* Activities Introduction */
+
+.activities-intro {
+    background: linear-gradient(135deg, #fce4ec, #fff5f8);
+    text-align: center;
+    padding: 35px 25px;
+    margin: 25px 0;
+    border: 1px solid #f4d5df;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.08);
+}
+
+.activity-label {
+    color: #b78396;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.activities-intro h2 {
+    color: #956b7c;
+    font-size: 27px;
+    margin: 10px 0;
+}
+
+.activities-intro p {
+    max-width: 700px;
+    margin: 10px auto;
+}
+
+/* Featured Activity Card */
+
+.activity-card {
+    background: white;
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+    padding: 28px;
+    margin: 30px auto;
+    max-width: 750px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(180, 130, 150, 0.17);
+}
+
+.activity-icon {
+    color: #c18b9e;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.activity-category {
+    color: #b78396;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.activity-card h3 {
+    color: #956b7c;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.activity-card p {
+    color: #786872;
+    line-height: 1.8;
+}
+
+.activity-link {
+    display: inline-block;
+    background: #f8dce6;
+    color: #886574;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 25px;
+    margin-top: 12px;
+    transition: background 0.3s ease;
+}
+
+.activity-link:hover {
+    background: #f2c8d7;
+}
+
+/* Todu Guam Preview */
+
+.activity-preview {
+    margin: 22px 0;
+}
+
+.activity-preview img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 14px;
+    border: 2px solid #f8dce6;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.activity-preview img:hover {
+    transform: scale(1.02);
+}
+
+/* My Role and Learning */
+
+.learning-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.learning-label {
+    color: #b78396;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.learning-section h2 {
+    color: #956b7c;
+    font-size: 26px;
+    margin: 10px 0 22px;
+}
+
+.learning-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.learning-card {
+    background: white;
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.10);
+    transition: transform 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-5px);
+}
+
+.learning-card span {
+    color: #c18b9e;
+    font-size: 28px;
+}
+
+.learning-card h3 {
+    color: #a87589;
+    margin: 10px 0;
+}
+
+.learning-card p {
+    color: #786872;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   MORE ABOUT ME PAGE
+===================================== */
+
+/* Introduction */
+
+.more-intro {
+    background: linear-gradient(135deg, #fce4ec, #fff5f8);
+    text-align: center;
+    padding: 35px 25px;
+    margin: 25px 0;
+    border: 1px solid #f4d5df;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.08);
+}
+
+.more-intro > p:first-child {
+    color: #b78396;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.more-intro h2 {
+    color: #956b7c;
+    font-size: 27px;
+    margin: 10px 0;
+}
+
+.more-intro p {
+    max-width: 700px;
+    margin: 10px auto;
+}
+
+/* Skills */
+
+.skills-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.skills-section h2 {
+    color: #956b7c;
+    font-size: 27px;
+    margin: 10px 0 22px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.skills-card {
+    background: white;
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(180, 130, 150, 0.17);
+}
+
+.skills-icon {
+    color: #c18b9e;
+    font-size: 28px;
+    text-align: center;
+}
+
+.skills-card h3 {
+    color: #a87589;
+    text-align: center;
+    margin: 10px 0 18px;
+}
+
+.skills-card ul {
+    padding-left: 22px;
+    line-height: 1.9;
+    color: #786872;
+}
+
+.skills-card li::marker {
+    color: #c18b9e;
+}
+
+/* Achievements */
+
+.achievements-section {
+    margin: 45px 0;
+    text-align: center;
+}
+
+.achievements-section h2 {
+    color: #956b7c;
+    font-size: 27px;
+    margin: 10px 0 22px;
+}
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.achievement-card {
+    background: linear-gradient(135deg, white, #fff5f8);
+    border: 1px solid #f3dce4;
+    border-radius: 18px;
+    padding: 25px 20px;
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(180, 130, 150, 0.17);
+}
+
+.achievement-card span {
+    font-size: 30px;
+}
+
+.achievement-card h3 {
+    color: #a87589;
+    margin: 10px 0;
+}
+
+.achievement-card p {
+    color: #786872;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* =====================================
+   RESPONSIVE / MOBILE LAYOUT
+===================================== */
+
+@media (max-width: 768px) {
+
+    main {
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    header {
+        padding: 28px 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    /* Home */
+
+    .home-sections {
+        flex-direction: column;
+    }
+
+    .guestbook,
+    .home-gallery {
+        width: 100%;
+    }
+
+    /* About Me */
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .profile-photo {
+        height: 140px;
+    }
+
+    .first-photo {
+        height: 160px;
+    }
+
+    .music-card img {
+        height: 160px;
+    }
+
+    /* Hobbies */
+
+    .hobbies-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hobby-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hobby-images img {
+        height: 150px;
+    }
+
+    /* Activities */
+
+    .learning-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* More About Me */
+
+    .skills-container,
+    .achievements-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ABOUT ME PROFILE PHOTOS */
+
+.profile-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px auto;
+}
+
+.profile-photo,
+.first-photo,
+.third-photo {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #f8dce6;
+    margin: 0;
+}
+
+.profile-photo:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+/* WORLD CITI COLLEGE PHOTO GALLERY */
+
+.education-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.education-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #f8dce6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(180, 130, 150, 0.18);
+}
+
+@media (max-width: 600px) {
+    .education-gallery img {
+        height: 150px;
+    }
+}
+
+/* ACTIVE NAVIGATION TAB */
+nav a.active {
+    background-color: #e8b6c8;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* ENLARGE PHOTOS ON CLICK */
+.photo-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(40, 20, 30, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.photo-modal img {
+    width: 98%;
+    height: 95vh;
+    max-width: 1600px;
+    object-fit: contain;
+    border: 4px solid white;
+    border-radius: 12px;
+}
+
+.photo-modal.show {
+    display: flex;
+    cursor: zoom-out;
+}
+
+/* ANIMATED WELCOME MESSAGE */
+.welcome-typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #d98eaa;
+    width: 0;
+    max-width: 100%;
+    animation:
+        typing 3s steps(27, end) forwards,
+        blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 27ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* CUTE FLOATING DECORATIONS */
+body::before,
+body::after {
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    font-size: 35px;
+    animation: floatDecor 4s ease-in-out infinite;
+}
+
+body::before {
+    content: "🎀";
+    top: 18%;
+    left: 15px;
+}
+
+body::after {
+    content: "✨";
+    bottom: 15%;
+    right: 18px;
+    animation-delay: 2s;
+}
+
+@keyframes floatDecor {
+    0%, 100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+}
+
+@media (max-width: 600px) {
+    body::before,
+    body::after {
+        font-size: 24px;
+    }
+}
+
+/* ==========================================
+   RAINE'S ELEGANT DIGITAL SCRAPBOOK
+   New visual theme - November 2026
+========================================== */
+
+:root {
+    --ivory: #faf7f0;
+    --paper: #fffdf8;
+    --rose: #c69a9e;
+    --dusty-rose: #ead6d2;
+    --wine: #754b55;
+    --brown: #66544f;
+    --taupe: #a7978b;
+    --sage: #a6aa98;
+    --border: #e9ded5;
+    --shadow: 0 8px 25px rgba(95, 70, 65, 0.07);
+}
+
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--ivory);
+    color: var(--brown);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.8;
+}
+
+/* HEADER */
+
+header {
+    background: var(--paper);
+    color: var(--wine);
+    padding: 55px 20px 45px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+header::after {
+    content: "a little piece of my world";
+    display: block;
+    color: var(--rose);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 4vw, 43px);
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: var(--wine);
+}
+
+/* NAVIGATION */
+
+nav {
+    background: var(--ivory);
+    border-bottom: 1px solid var(--border);
+    padding: 13px 10px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--brown);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    background: transparent;
+    color: var(--rose);
+    border-radius: 0;
+}
+
+/* MAIN CONTENT */
+
+main {
+    width: 88%;
+    max-width: 1150px;
+    margin: 45px auto;
+}
+
+/* HEADINGS */
+
+h1, h2, h3 {
+    color: var(--wine);
+}
+
+h2 {
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+/* GENERAL PAPER CARDS */
+
+.welcome,
+.education-card,
+.guestbook,
+.home-gallery,
+.hobby-card,
+.activity-card,
+.learning-card,
+.skills-card,
+.achievement-card,
+.music-card,
+.song-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+/* WELCOME */
+
+.welcome {
+    padding: 40px;
+    text-align: center;
+    border-top: 3px solid var(--rose);
+}
+
+.welcome h2 {
+    font-size: 30px;
+    color: var(--wine);
+}
+
+/* INTRODUCTION SECTIONS */
+
+.hobbies-intro,
+.activities-intro,
+.more-intro {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    padding: 40px 30px;
+}
+
+.hobbies-intro h2,
+.activities-intro h2,
+.more-intro h2 {
+    color: var(--wine);
+    font-size: 30px;
+}
+
+.intro-label,
+.activity-label,
+.section-label,
+.learning-label,
+.intro-decoration,
+.more-intro > p:first-child {
+    color: var(--rose);
+}
+
+/* PHOTO GALLERIES */
+
+.profile-photo {
+    border: 7px solid white;
+    outline: 1px solid var(--border);
+    border-radius: 2px;
+    box-shadow: var(--shadow);
+    object-fit: cover;
+}
+
+.profile-photo:hover {
+    transform: rotate(-1deg) scale(1.02);
+}
+
+.home-gallery-images img,
+.hobby-images img {
+    border: 7px solid white;
+    outline: 1px solid var(--border);
+    border-radius: 2px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.home-gallery-images img:hover,
+.hobby-images img:hover {
+    transform: rotate(-1deg) scale(1.02);
+}
+
+/* HOBBY CARDS */
+
+.hobbies-gallery {
+    gap: 30px;
+}
+
+.hobby-card {
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-4px);
+}
+
+.hobby-card h3 {
+    color: var(--wine);
+}
+
+/* EDUCATION */
+
+.education-card {
+    border-left: 3px solid var(--rose);
+    padding: 25px;
+}
+
+.education-card h3 {
+    color: var(--wine);
+}
+
+/* ACTIVITIES */
+
+.activity-card {
+    padding: 35px;
+}
+
+.activity-icon,
+.activity-category {
+    color: var(--rose);
+}
+
+.activity-card h3 {
+    color: var(--wine);
+}
+
+.activity-link {
+    background: var(--wine);
+    color: white;
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.activity-link:hover {
+    background: var(--rose);
+}
+
+/* LEARNING AND SKILLS */
+
+.learning-card,
+.skills-card,
+.achievement-card {
+    padding: 28px;
+}
+
+.learning-card span,
+.learning-card h3,
+.skills-icon,
+.skills-card h3 {
+    color: var(--wine);
+}
+
+.achievements-section h2,
+.skills-section h2,
+.learning-section h2,
+.music-section h2 {
+    color: var(--wine);
+}
+
+/* MUSIC */
+
+.music-card img {
+    border: 6px solid white;
+    outline: 1px solid var(--border);
+    border-radius: 2px;
+}
+
+.song-card {
+    background: var(--paper);
+}
+
+.song-icon {
+    color: var(--rose);
+}
+
+.song-card h3 {
+    color: var(--wine);
+}
+
+/* HOMEPAGE TWO-COLUMN LAYOUT */
+
+.home-sections {
+    gap: 25px;
+}
+
+.guestbook,
+.home-gallery {
+    padding: 24px;
+}
+
+.guestbook h2,
+.home-gallery h2 {
+    color: var(--wine);
+}
+
+/* GUESTBOOK FORM */
+
+.guestbook input,
+.guestbook textarea {
+    background: #fffdf9;
+    color: var(--brown);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+}
+
+.guestbook input:focus,
+.guestbook textarea:focus {
+    outline: 1px solid var(--rose);
+}
+
+.guestbook button {
+    background: var(--wine);
+    color: white;
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.guestbook button:hover {
+    background: var(--rose);
+}
+
+#messageList {
+    background: var(--ivory);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+}
+
+.message-card {
+    background: var(--paper);
+    border-left: 3px solid var(--rose);
+    border-radius: 2px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--paper);
+    color: var(--taupe);
+    border-top: 1px solid var(--border);
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* LINKS */
+
+a {
+    transition: color 0.3s ease;
+}
+
+/* SUBTLE SCROLLBAR */
+
+::selection {
+    background: var(--dusty-rose);
+    color: var(--wine);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    main {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    header {
+        padding: 40px 15px;
+    }
+
+    nav a {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+
+    .home-sections {
+        flex-direction: column;
+    }
+
+    .guestbook,
+    .home-gallery {
+        width: 100%;
+    }
+
+    .hobbies-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-content,
+    .skills-container,
+    .achievements-container,
+    .music-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        padding: 25px;
+    }
+
+    .activity-card {
+        padding: 25px;
+    }
+}
+
+/* HEADER SECRET LETTER */
+
+.header-letter-button {
+    background: #8b6260;
+    color: white;
+    border: none;
+    padding: 11px 23px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 12px auto 20px;
+    font-family: Georgia, serif;
+    transition: 0.3s ease;
+}
+
+.header-letter-button:hover {
+    background: #674b48;
+    transform: translateY(-3px);
+}
+
+.secret-message {
+    display: none;
+    max-width: 500px;
+    margin: 10px auto 20px;
+    padding: 20px;
+    background: #fffdf8;
+    border: 1px dashed #c5a99a;
+    border-radius: 8px;
+    color: #574641;
+    line-height: 1.8;
+}
+
+.secret-message.show {
+    display: block;
+    animation: letterReveal 0.5s ease;
+}
